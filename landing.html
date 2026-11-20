@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>이음시 청년정책 담당 지원 포트폴리오</title>
+
+<style>
+:root {
+  --bg: #f4f6fa;
+  --card: #ffffff;
+  --text: #182235;
+  --sub: #566277;
+  --accent: #2457d6;
+  --accent-bg: #edf3ff;
+  --line: #dfe5ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Malgun Gothic", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+.container {
+  width: 100%;
+  max-width: 780px;
+  margin: auto;
+  padding: 24px 18px 70px;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 30px 24px;
+  margin-bottom: 24px;
+}
+
+.hero {
+  background: #172b4d;
+  color: white;
+  border: none;
+  padding: 42px 26px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.hero .label {
+  color: #b9d0ff;
+}
+
+h1 {
+  font-size: clamp(32px, 9vw, 44px);
+  line-height: 1.45;
+  margin: 12px 0 22px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+p {
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+.hero p {
+  color: #e2eaf8;
+  font-size: 19px;
+}
+
+.highlight {
+  color: #bdd2ff;
+}
+
+/* 버튼 한 개 */
+.cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  background: white;
+  color: #172b4d;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.cta:focus,
+.cta:hover {
+  background: #e2ebff;
+  outline: 3px solid #91b3ff;
+}
+
+/* 강점 */
+.strength {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.strength:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.strength-number {
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.strength p {
+  color: var(--sub);
+}
+
+/* 산출물 */
+.artifact {
+  background: var(--accent-bg);
+  border-radius: 18px;
+  padding: 24px;
+  margin-top: 18px;
+}
+
+.artifact p {
+  margin-bottom: 0;
+}
+
+/* 사례 */
+.case-section {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.case-step {
+  margin: 18px 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fcfdff;
+}
+
+.step-label {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.number {
+  font-size: 38px;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1.4;
+}
+
+.number-label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* 일하는 태도 */
+.attitude {
+  background: #f9fbff;
+}
+
+.attitude-item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.attitude-item:last-child {
+  border-bottom: none;
+}
+
+.attitude-item p {
+  margin-bottom: 0;
+  color: var(--sub);
+}
+
+/* 연락처 */
+.contact {
+  text-align: center;
+}
+
+.contact-info {
+  margin-top: 24px;
+  padding: 22px;
+  border-radius: 18px;
+  background: #f1f4f8;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.small {
+  font-size: 15px;
+  color: var(--sub);
+}
+
+/* 태블릿·PC */
+@media (min-width: 700px) {
+  .container {
+    padding: 42px 26px 90px;
+  }
+
+  section {
+    padding: 38px;
+  }
+
+  .hero {
+    padding: 54px 42px;
+  }
+
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+/* 작은 휴대폰 */
+@media (max-width: 380px) {
+  body {
+    font-size: 17px;
+  }
+
+  .container {
+    padding: 18px 14px 50px;
+  }
+
+  section {
+    padding: 26px 20px;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 31px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="container">
+
+  <!-- 1. 첫 화면 -->
+  <section class="hero">
+
+    <div class="label">YOUTH POLICY · JOB APPLICATION</div>
+
+    <h1>
+      이음시 청년정책 담당자로서<br>
+      <span class="highlight">정책 신청 절차를 분석하고 개선하겠습니다.</span>
+    </h1>
+
+    <p>
+      문제 정의 · 결과 검증 · 협의와 실행
+    </p>
+
+    <p>
+      신청 과정의 문제를 확인하고,
+      공고문과 기준을 대조하며,
+      이용자 의견을 개선안에 반영합니다.
+    </p>
+
+    <a href="#artifacts" class="cta">
+      산출물 3개 보기 ↓
+    </a>
+
+  </section>
+
+
+  <!-- 2. 강점 3가지 -->
+  <section>
+
+    <div class="label">CORE COMPETENCIES</div>
+    <h2>직무 수행 역량 3가지</h2>
+
+    <div class="strength">
+      <div class="strength-number">01 · 문제 정의</div>
+      <h3>신청 절차의 문제 지점 분류</h3>
+      <p>
+        신청 단계별 이용자 불편을 확인하고,
+        문제 발생 지점과 원인을 기록합니다.
+      </p>
+    </div>
+
+    <div class="strength">
+      <div class="strength-number">02 · 결과 검증</div>
+      <h3>공고문과 기준 조항 대조</h3>
+      <p>
+        정책 공고, 신청 조건, 안내 내용을 대조하고,
+        불일치 및 오류 확인 항목을 정리합니다.
+      </p>
+    </div>
+
+    <div class="strength">
+      <div class="strength-number">03 · 협의와 실행</div>
+      <h3>이용자 의견 수집 및 반영</h3>
+      <p>
+        이용자 의견을 수집·분류하고,
+        개선 필요 사항과 반영 결과를 표로 작성합니다.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- 3. 산출물 -->
+  <section id="artifacts">
+
+    <div class="label">WORK OUTPUTS</div>
+    <h2>업무 결과물 3개</h2>
+
+    <div class="artifact">
+      <h3>01. 문제 정의서</h3>
+      <p>
+        신청 절차별 불편 사항 · 문제 발생 지점 · 개선 필요 내용
+      </p>
+    </div>
+
+    <div class="artifact">
+      <h3>02. 공고문 대조표</h3>
+      <p>
+        공고 내용 · 기준 조항 · 불일치 여부 · 확인 결과
+      </p>
+    </div>
+
+    <div class="artifact">
+      <h3>03. 이용자 의견 반영표</h3>
+      <p>
+        의견 내용 · 공통 문제 · 개선안 · 반영 여부
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- 4. 사례 -->
+  <section>
+
+    <div class="label">CASE STUDY</div>
+    <h2>청년정책 신청 절차 불편 분석</h2>
+
+    <p>
+      청년정책 신청 과정에서 발생하는 불편을 확인하고,
+      신청 절차와 공고 내용의 검토 항목을 정리했습니다.
+    </p>
+
+    <div class="case-section">
+
+      <!-- 문제 -->
+      <div class="case-step">
+        <div class="step-label">STEP 01 · 문제</div>
+        <h3>신청 과정에서 확인된 문제</h3>
+
+        <div class="number">7곳</div>
+        <div class="number-label">신청 과정에서 막힌 지점</div>
+
+        <br>
+
+        <div class="number">2곳</div>
+        <div class="number-label">확인이 필요한 조항 오류</div>
+      </div>
+
+      <!-- 한 일 -->
+      <div class="case-step">
+        <div class="step-label">STEP 02 · 한 일</div>
+        <h3>절차와 안내 내용 확인</h3>
+
+        <p>
+          · 신청 단계별 불편 지점 정리<br>
+          · 공고문과 기준 조항 대조<br>
+          · 이용자 의견 수집 및 분류
+        </p>
+
+        <div class="number">5명</div>
+        <div class="number-label">의견 확인 이용자</div>
+      </div>
+
+      <!-- 결과 -->
+      <div class="case-step">
+        <div class="step-label">STEP 03 · 결과</div>
+        <h3>분석 결과 정리</h3>
+
+        <p>
+          · 신청 과정 문제 7곳 기록<br>
+          · 오류 의심 조항 2곳 확인 항목화<br>
+          · 이용자 5명의 의견 정리
+        </p>
+
+        <p class="small">
+          실제 개선·수정 완료 여부 및 적용 결과: 입력 필요
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- 5. 일하는 태도 -->
+  <section class="attitude">
+
+    <div class="label">WORKING PRINCIPLES</div>
+    <h2>업무 수행 방식</h2>
+
+    <div class="attitude-item">
+      <h3>이용자 관점에서 확인</h3>
+      <p>
+        신청자 입장에서 절차를 살펴보고
+        이용 과정에서 발생하는 문제를 기록합니다.
+      </p>
+    </div>
+
+    <div class="attitude-item">
+      <h3>자료와 기준 대조</h3>
+      <p>
+        공고문, 조항, 안내 내용을 비교하여
+        확인 근거를 정리합니다.
+      </p>
+    </div>
+
+    <div class="attitude-item">
+      <h3>협의 후 개선안 실행</h3>
+      <p>
+        수집한 의견을 공유하고 개선 항목을 정리하여
+        반영 여부와 결과를 확인합니다.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- 6. 연락처 -->
+  <section class="contact">
+
+    <div class="label">CONTACT</div>
+
+    <h2>
+      문제를 기록하고,<br>
+      개선 결과까지 확인하겠습니다.
+    </h2>
+
+    <p>
+      청년정책 신청 과정의 문제 분석부터
+      이용자 의견 반영까지 담당 업무에 연결하겠습니다.
+    </p>
+
+    <div class="contact-info">
+      지원 직무 : 이음시 청년정책 담당<br><br>
+      연락처 : 입력 필요<br>
+      이메일 : 입력 필요
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>
